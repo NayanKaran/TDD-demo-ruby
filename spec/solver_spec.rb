@@ -33,4 +33,19 @@ describe Solver do
       expect(Solver.reverse('world')).to eq('dlrow')
     end
   end
+
+  describe '#fizzbuzz' do
+    it 'returns "fizz" for divisor of 3' do
+      expect(Solver.fizzbuzz(3)).to eq('fizz')
+    end
+    it 'returns "buzz" for divisor of 5' do
+      expect(Solver.fizzbuzz(5)).to eq('buzz')
+    end
+    it 'returns "fizzbuzz" for divisor of 3 and 5' do
+      expect(Solver.fizzbuzz(15)).to eq('fizzbuzz')
+    end
+    it 'returns N as a string if not divisable by 3 or 5' do
+      expect(Solver.fizzbuzz(7)).to eq('7')
+    end
+  end
 end
