@@ -1,20 +1,23 @@
 class Solver
-  def self.factorial(n)
-    raise ArgumentError if n < 0
-    (1..n).inject(:*) || 1
+  def self.factorial(num)
+    raise ArgumentError if num.negative?
+
+    (1..num).inject(:*) || 1
   end
-  def self.reverse(s)
-    s.reverse
+
+  def self.reverse(str)
+    str.reverse
   end
-  def self.fizzbuzz(n)
-    if n % 3 == 0 && n % 5 == 0
+
+  def self.fizzbuzz(num)
+    if (num % 3).zero? && (num % 5).zero?
       'fizzbuzz'
-    elsif n % 3 == 0
+    elsif (num % 3).zero?
       'fizz'
-    elsif n % 5 == 0
+    elsif (num % 5).zero?
       'buzz'
     else
-      n.to_s
+      num.to_s
     end
   end
 end
