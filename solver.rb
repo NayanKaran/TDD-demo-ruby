@@ -3,4 +3,7 @@ class Solver
     raise ArgumentError if n < 0
     (1..n).inject(:*) || 1
   end
+  def self.reverse(s)
+    s.reverse
+  end
 end
